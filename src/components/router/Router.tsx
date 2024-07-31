@@ -8,7 +8,6 @@ import { SettingsView } from "../../views/settings/SettingsView"
 import { ArtView } from "../../views/art/ArtView"
 import { ThemeOutlet } from "../../views/settings/theme/ThemeOutlet"
 import { LanguageOutlet } from "../../views/settings/language/LanguageOutlet"
-
 export const Router = () => {
 
   return (

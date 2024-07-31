@@ -17,19 +17,16 @@ export const ThemeOutlet = () => {
             Set the main color theme of the app.
           </p>
         </div>
-        {/* <Switch
-        first="Dark"
-        second="Light"
-        onchange={() => {}}/> */}
-        <Select
-        defaultValue="test">
-          <Option
-          text="test"
-          value="testval"/>
-          <Option
-          text="test2ffffff"
-          value="testval2"/>
-        </Select>
+        <Switch>
+          <Switch.Option
+          value="dark">
+            Dark
+          </Switch.Option>
+          <Switch.Option
+          value="light">
+            Light
+          </Switch.Option>
+        </Switch>
       </div>
     </>
   )

@@ -1,4 +1,7 @@
+//React
 import { Children, useState } from "react"
+
+//Components
 import { Option } from "./Option"
 
 type PropsType = {

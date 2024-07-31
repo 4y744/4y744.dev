@@ -1,23 +1,19 @@
 type PropsType = {
-  text: string,
+  children: any,
   value: string,
-  select?: (value: string, text: string) => void
+  selected?: string,
+  onSelect?: (value: string) => void
 }
 
-export const Option = ({ text, value, select } : PropsType) => {
-
-  const handleSelect = () => {
-    if(select)
-      select(value, text);
-  }
+export const Option = ({ children, value, selected, onSelect } : PropsType) => {
 
   return (
     <button
-    className="px-4 py-2
+    className={`px-4 py-2 text-start
     hover:bg-white hover:text-primary
-    text-start"
-    onClick={handleSelect}>
-      {text}
+    ${value == selected ? "bg-white text-primary" : ""}`}
+    onClick={() => onSelect!(value)}>
+      {children}
     </button>
 
   )

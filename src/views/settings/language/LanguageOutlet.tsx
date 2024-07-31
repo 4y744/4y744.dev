@@ -16,9 +16,16 @@ export const LanguageOutlet = () => {
           </p>
         </div>
         <Switch
-        first="English"
-        second="Bulgarian"
-        onchange={() => {}}/>
+        defaultValue="english">
+          <Switch.Option
+          value="english">
+            English
+          </Switch.Option>
+          <Switch.Option
+          value="bulgarian">
+            Bulgarian
+          </Switch.Option>
+        </Switch>
       </div>
     </>
   )

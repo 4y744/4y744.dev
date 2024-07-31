@@ -11,8 +11,8 @@ export const Page = ({ children, centerH, centerV} : PageProps) => {
     className={`flex flex-col 
     min-h-[calc(100vh-64px)]
     ml-16 p-8
-    ${centerH ? "items-center" : null}
-    ${centerV ? "justify-center" : null}`}>
+    ${centerH ? "items-center" : ""}
+    ${centerV ? "justify-center" : ""}`}>
       {children}
     </div>
   )

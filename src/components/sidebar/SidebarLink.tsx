@@ -1,21 +1,15 @@
-import { MouseEvent } from "react";
-import { Link } from "react-router-dom"
+//React Router
+import { NavLink } from "react-router-dom"
 
 export const SidebarLink = ({ icon, text, url } : { icon: JSX.Element, text: string, url: string }) => {
 
-  /**
-   * Makes the link undraggable.
-   */
-  const handleMouseDown = (event: MouseEvent) => event.preventDefault();
-
-
   return (
-    <Link
-    className="flex items-center
-    text-white text-xl
-    hover:bg-white hover:text-primary hover:shadow-md
-    transition-btn duration-100"
-    onMouseDown={handleMouseDown}
+    <NavLink
+    className={({isActive}) => `flex items-center text-xl
+    hover:bg-white hover:text-primary
+    transition-btn duration-100
+    ${isActive ? "bg-white text-primary" : "bg-primary text-white"}`}
+    draggable={false}
     to={url}>
       <div
       className="flex justify-center items-center
@@ -27,6 +21,6 @@ export const SidebarLink = ({ icon, text, url } : { icon: JSX.Element, text: str
       className="font-bold text-base">
         {text}
       </span>
-    </Link>
+    </NavLink>
   )
 }

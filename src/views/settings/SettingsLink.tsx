@@ -9,9 +9,8 @@ export const SettingsLink = ({ text, url } : PropsType) => {
 
   return (
     <NavLink
-    className={({isActive}) => `
-    ${isActive ? "btn btn-active" : "btn"}
-    `}
+    className={({isActive}) => `button-3d 
+    ${isActive ? "button-3d-active" : ""}`}
     draggable={false}
     to={url}>
       {text}
