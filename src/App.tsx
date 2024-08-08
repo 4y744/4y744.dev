@@ -1,18 +1,11 @@
-//Components
-import { Sidebar } from "./components/sidebar/Sidebar"
-import { Router } from "./components/router/Router"
-
 //React Router
-import { BrowserRouter } from "react-router-dom"
-
+import { RouterProvider } from "react-router-dom"
+import { router } from "./router"
 
 export const App = () => {
 
-  return (
-    <BrowserRouter>
-      <Sidebar/>
-      <Router/>
-    </BrowserRouter>
+  return ( 
+    <RouterProvider router={router}/>
   )
 }
 
