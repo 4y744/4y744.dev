@@ -1,8 +1,8 @@
 export const NotFound = () => {
-
   return (
     <div>
-      404
+      <div className="f">hello world</div>
+      <div>f</div>
     </div>
-  )
-}
+  );
+};

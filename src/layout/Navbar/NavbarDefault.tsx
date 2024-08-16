@@ -1,37 +1,36 @@
-import { Navbar } from "."
-import { NavbarSearch } from "./NavbarSearch"
-
+//Import Components
+import { Navbar } from ".";
 
 export const NavbarDefault = () => {
-
   return (
     <nav
-    className="bg-dark-950 h-16
-    flex items-center gap-2 p-2
-    border-b border-b-dark-800">
-      <div
-      className="flex-1">
+      className="sticky top-0 h-16 z-50
+      bg-dark-950/90 backdrop-blur
+      flex items-center gap-2 p-2
+      border-b border-b-dark-700"
+    >
+      <div className="flex-1">
         <Navbar.Title>
-          4y744.dev
+          <span className="text-dark-400">{"<"}</span>
+          <span>4y744</span>
+          <span className="text-dark-400">.</span>
+          <span>dev</span>
+          <span className="text-dark-400">{"/>"}</span>
         </Navbar.Title>
       </div>
-
       <div
-      className="flex justify-center flex-1">
-        <NavbarSearch/>
+        className="flex-1
+        flex justify-center"
+      >
+        <Navbar.Search />
       </div>
-
       <div
-      className="flex items-center justify-end gap-2 flex-1">
-        <Navbar.Link
-        to="">
-          Home
-        </Navbar.Link>
-        <Navbar.Link
-        to="docs">
-          Docs
-        </Navbar.Link>
+        className="flex-1
+        flex items-center justify-end gap-2"
+      >
+        <Navbar.Link to="">Home</Navbar.Link>
+        <Navbar.Link to="docs">Docs</Navbar.Link>
       </div>
     </nav>
-  )
-}
+  );
+};

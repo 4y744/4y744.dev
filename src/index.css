@@ -17,31 +17,35 @@
   }
 
   h1{
-    @apply font-bold text-3xl my-2
+    @apply font-bold text-4xl py-4
   }
 
   h2{
-    @apply font-bold text-2xl my-2
+    @apply font-bold text-3xl py-4
   }
 
   h3{
-    @apply font-bold text-xl my-2
+    @apply font-bold text-2xl py-4
   }
 
   h4{
-    @apply font-bold text-lg my-2
+    @apply font-bold text-xl py-4
   }
 
   h5{
-    @apply font-bold text-base my-2
+    @apply font-bold text-lg py-4
   }
 
   h6{
-    @apply font-bold text-sm my-2
+    @apply font-bold text-base py-4
   }
 
   p{
-    @apply font-normal text-base text-dark-400 text-balance leading-7 my-2
+    @apply font-normal text-base text-dark-400 text-balance leading-7 py-4
+  }
+
+  pre{
+    @apply bg-dark-800 rounded-lg text-sm px-4 py-2 my-4 min-w-[500px] w-3/4
   }
 
 }
@@ -54,6 +58,14 @@
 
   .animation-slide-up{
     animation: slide-up 100ms ease-in-out;
+  }
+
+  /* 
+  I have no clue why, but for some reason if you use text-dark-300 
+  with a NavLink "isActive" parameter it won't change the color.
+  */
+  .what-kind-of-bug-is-this{
+    @apply text-dark-300
   }
 
 }

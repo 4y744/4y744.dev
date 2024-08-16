@@ -1,19 +1,22 @@
-import { ReactNode } from "react"
-import { Link } from "react-router-dom"
+//Import React
+import { ReactNode } from "react";
+
+//Import React Router
+import { Link } from "react-router-dom";
 
 type Props = {
-  children?: ReactNode,
-  url: string
-}
- 
-export const FooterLink = ({ children, url } : Props) => {
+  children: ReactNode;
+  to: string;
+};
 
+export const FooterLink = ({ children, to }: Props) => {
   return (
     <Link
-    className="text-zinc-400 text-sm hover:text-zinc-300
-    transition-text duration-100"
-    to={url}>
-      { children }
+      className="transition-text duration-100
+      text-sm text-zinc-400 hover:text-zinc-300"
+      to={to}
+    >
+      {children}
     </Link>
-  )
-}
+  );
+};

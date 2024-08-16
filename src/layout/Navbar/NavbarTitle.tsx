@@ -1,15 +1,17 @@
-import { ReactNode } from "react"
+//Import React
+import { ReactNode } from "react";
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
-export const NavbarTitle = ({ children } : Props) => {
-
+export const NavbarTitle = ({ children }: Props) => {
   return (
     <span
-    className="font-bold text-lg">
+      className="select-none
+      font-bold text-xl px-2"
+    >
       {children}
     </span>
-  )
-}
+  );
+};

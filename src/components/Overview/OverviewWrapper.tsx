@@ -1,29 +1,15 @@
-import { Children } from "react"
-import { Overview } from "."
+//Import components
+import { Overview } from ".";
 
 type Props = {
-  children: any
-}
+  children: any;
+};
 
-export const OverviewWrapper = ({ children } : Props) => {
-
-  const anchored = Children.map(children.props.children, child => (
-    child.type == "h1" ? (
-      <Overview.Anchor
-      id={child.props.children}>
-        {child}
-      </Overview.Anchor>
-    ) : (
-      <>
-        {child}
-      </>
-    )
-  ))
-
+export const OverviewWrapper = ({ children }: Props) => {
   return (
-    <div
-    className="w-full">
-      {anchored}
-    </div>
-  )
-}
+    <>
+      <div className="w-full px-4">{children}</div>
+      <Overview>{children}</Overview>
+    </>
+  );
+};

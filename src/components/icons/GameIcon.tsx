@@ -1,6 +1,3 @@
 export const GameIcon = () => {
-
-  return (
-    <i className="fa-solid fa-gamepad"/>
-  )
-}
+  return <i className="fa-solid fa-gamepad" />;
+};

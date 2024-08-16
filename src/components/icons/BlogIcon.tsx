@@ -1,6 +1,3 @@
 export const BlogIcon = () => {
-  
-  return (
-    <i className="fa-solid fa-quote-left"/>
-  )
-}
+  return <i className="fa-solid fa-quote-left" />;
+};

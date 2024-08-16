@@ -1,8 +1,8 @@
-import { DefaultNote } from "./DefaultNote"
-import { WarningNote } from "./WarningNote"
+import { DefaultNote } from "./DefaultNote";
+import { WarningNote } from "./WarningNote";
 
 const index = Object.assign(DefaultNote, {
-  Warning: WarningNote
+  Warning: WarningNote,
 });
 
-export { index as Note }
+export { index as Note };

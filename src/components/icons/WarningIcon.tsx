@@ -1,6 +1,3 @@
 export const WarningIcon = () => {
-
-  return (
-    <i className="fa-solid fa-triangle-exclamation"/>
-  )
-}
+  return <i className="fa-solid fa-triangle-exclamation" />;
+};

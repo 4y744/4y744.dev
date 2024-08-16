@@ -1,7 +1,7 @@
 import { NavbarDefault } from "./NavbarDefault";
-import { NavbarLink } from "./NavbarLink";
-import { NavbarSearch } from "./NavbarSearch";
 import { NavbarTitle } from "./NavbarTitle";
+import { NavbarSearch } from "./NavbarSearch";
+import { NavbarLink } from "./NavbarLink";
 
 const index = Object.assign(NavbarDefault, {
   Title: NavbarTitle,

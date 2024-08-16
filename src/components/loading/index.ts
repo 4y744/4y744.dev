@@ -1,10 +1,9 @@
-import { LoadingPage } from "./LoadingPage"
-import { LoadingSpinner } from "./LoadingSpinner"
-
+import { LoadingPage } from "./LoadingPage";
+import { LoadingSpinner } from "./LoadingSpinner";
 
 const index = Object.assign(LoadingSpinner, {
   Spinner: LoadingSpinner,
-  Page: LoadingPage
-})
+  Page: LoadingPage,
+});
 
-export { index as Loading }
+export { index as Loading };

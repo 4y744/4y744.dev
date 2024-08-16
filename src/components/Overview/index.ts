@@ -6,7 +6,7 @@ import { OverviewWrapper } from "./OverviewWrapper";
 const index = Object.assign(OverviewDefault, {
   Wrapper: OverviewWrapper,
   Anchor: OverviewAnchor,
-  Skip: OverviewSkip
+  Skip: OverviewSkip,
 });
 
-export { index as Overview }
+export { index as Overview };

@@ -1,32 +1,31 @@
-import { Children, Fragment, ReactNode, } from "react"
-import { OverviewAnchor } from "./OverviewAnchor"
-import { Overview } from "."
+import { Children } from "react";
+import { Overview } from ".";
 
 type Props = {
-  children: any
-}
+  children: any;
+};
 
-export const OverviewDefault = ({ children } : Props) => {
-
-  const skips = Children.map(children.props.children, child => (
-    child.type == "h1" ? (
+export const OverviewDefault = ({ children }: Props) => {
+  //Get array of all Overview.Anchor components converted to Overview.Skip
+  //Content is inside React.Fragment so map its "chilren" prop
+  const skips = Children.map(children.props.children, (child) =>
+    child.type?.name == "OverviewAnchor" ? (
       <Overview.Skip
-      to={child.props.children}>
+        key={child}
+        to={child.props.children}
+      >
         {child.props.children}
       </Overview.Skip>
     ) : null
-  ));
+  );
 
   return (
     <div
-    className="grid grid-cols-1 auto-rows-max
-    w-64 px-4">
-      <span
-      className="text-sm font-bold
-      px-4 py-2">
-        Overview
-      </span>
+      className="sticky top-24 self-start
+      flex flex-col w-64 px-4 text-sm"
+    >
+      <span className="font-bold px-4 py-2">Overview</span>
       {skips}
     </div>
-  )
-}
+  );
+};

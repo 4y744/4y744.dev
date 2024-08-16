@@ -1,6 +1,3 @@
 export const ArtIcon = () => {
-
-  return (
-    <i className="fa-solid fa-palette"/>
-  )
-}
+  return <i className="fa-solid fa-palette" />;
+};
